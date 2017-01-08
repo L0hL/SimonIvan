@@ -1,14 +1,14 @@
 package simonFinished;
 
-import GUIpractice.components.Visible;
+import GUIpractice.component.Visible;
 
 public interface ProgressInterfaceIvan extends Visible {
 
-	static void gameOver() {
+	public static void gameOver() {
 		// TODO Auto-generated method stub
 		
 	}
-	void setRound(int round);
-	void setSequencesSize(int sequence);
+	public void setRound(int round);
+	public void setSequencesSize(int sequence);
 
 }

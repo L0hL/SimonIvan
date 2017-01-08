@@ -1,7 +1,7 @@
 package simonFinished;
 
 import GUIpractice.GUIApplication;
-import WhackaMole.WhackAMoleScreen;
+
 
 public class SimonGameIvan extends GUIApplication{
 

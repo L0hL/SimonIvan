@@ -3,22 +3,22 @@ package simonFinished;
 import java.awt.Color;
 import java.util.ArrayList;
 import java.util.List;
+import GUIpractice.ClickableScreen;
+import GUIpractice.component.Action;
+import GUIpractice.component.TextLabel;
+import GUIpractice.component.Visible;
 
-import GUIpractice.components.Action;
-import GUIpractice.components.TextLabel;
-import GUIpractice.components.Visible;
-import GUIpractice.sampleGames.ClickableScreen;
 
 public class SimonScreenIvan extends ClickableScreen implements Runnable {
 	private TextLabel label;
-	private ButtonInterfaceIvan button;
+	private ButtonInterfaceIvan[] button;
 	private ProgressInterfaceIvan progress;
 	private ArrayList<MoveInterfaceIvan> move;
 	
 	private int roundNumber;
 	private boolean acceptingInput;
 	private int sequenceIndex;
-	int lastSelectedButton;
+	int prevButton;
 
 
 	public SimonScreenIvan(int width, int height) {
@@ -35,8 +35,8 @@ public class SimonScreenIvan extends ClickableScreen implements Runnable {
 	}
 
 	private void nextRound() {
-		// TODO Auto-generated method stub
-		
+		acceptingInput = false;
+		roundNumber++;
 	}
 	public void changeText(String s){
 		try{
@@ -48,7 +48,20 @@ public class SimonScreenIvan extends ClickableScreen implements Runnable {
 		
 	}
 	public void playSequence(){
-		
+		ButtonInterfaceIvan b = null;
+		for(MoveInterfaceIvan m: move){
+			if(b!=null)b.dim();
+			b = m.getButton();
+			b.highlight();
+			try {
+				Thread.sleep((long)(2000*(2.0/(roundNumber+2))));
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+		b.dim();
+	
+
 	}
 	@Override
 	public void initAllObjects(List<Visible> viewObjects) {
@@ -57,7 +70,7 @@ public class SimonScreenIvan extends ClickableScreen implements Runnable {
 		label = new TextLabel(130,230,300,40,"Let's play Simon!");
 		move = new ArrayList<MoveInterfaceIvan>();
 		//add 2 moves to start
-		lastSelectedButton = -1;
+		prevButton = -1;
 		move.add(randomMove());
 		move.add(randomMove());
 		roundNumber = 0;
@@ -129,9 +142,18 @@ public class SimonScreenIvan extends ClickableScreen implements Runnable {
 	}
 
 	public MoveInterfaceIvan randomMove() {
-		Button b;
-		//code that randomly selects a ButtonInterfaceX
-		return getMove(b)
+		int rand;
+		rand = (int) (Math.random() * button.length);
+		while (rand == prevButton){
+			rand = (int) (Math.random() * button.length);
+		}
+		prevButton = rand;
+		return getMove(rand);
+	}
+
+	private MoveInterfaceIvan getMove(int rand) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 
