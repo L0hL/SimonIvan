@@ -1,4 +1,4 @@
-package simonFinished;
+package simon;
 
 import java.awt.Color;
 import java.util.ArrayList;

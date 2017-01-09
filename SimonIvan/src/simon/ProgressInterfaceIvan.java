@@ -1,4 +1,4 @@
-package simonFinished;
+package simon;
 
 import GUIpractice.component.Visible;
 
