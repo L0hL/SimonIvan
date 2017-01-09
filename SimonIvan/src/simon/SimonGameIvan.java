@@ -1,6 +1,5 @@
 package simon;
 
-//import GUIpractice.GUIApplication;
 
 import guiPractice.GUIApplication;
 
