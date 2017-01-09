@@ -13,8 +13,6 @@ public class Button extends Component implements ButtonInterfaceIvan {
 	private Action action;
 	private Color display;
 	
-	
-	
 	public Button(int x, int y, int w, int h) {
 		super(x, y, w, h);
 	}
