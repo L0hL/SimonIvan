@@ -5,7 +5,7 @@ import simon.MoveInterfaceIvan;
 
 public class Move implements MoveInterfaceIvan {
 
-	ButtonInterfaceIvan b;
+	private ButtonInterfaceIvan b;
 	
 	public Move(ButtonInterfaceIvan b) {
 		this.b = b;

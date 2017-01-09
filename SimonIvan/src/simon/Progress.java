@@ -10,6 +10,8 @@ public class Progress extends Component implements ProgressInterfaceIvan {
 
 	private static final int WIDTH = 50;
 	private static final int HEIGHT = 50;
+	private boolean gameOver;
+	
 	
 	public Progress(int x, int y, int w, int h) {
 		super(x, y, w, h);
@@ -21,8 +23,7 @@ public class Progress extends Component implements ProgressInterfaceIvan {
 
 	@Override
 	public void gameOver() {
-		// TODO Auto-generated method stub
-
+		gameOver = true;
 	}
 
 	@Override
