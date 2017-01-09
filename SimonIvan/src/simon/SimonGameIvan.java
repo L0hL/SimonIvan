@@ -1,7 +1,6 @@
 package simon;
 
-
-import guiPractice.GUIApplication;
+import GUIpractice.GUIApplication;
 
 public class SimonGameIvan extends GUIApplication{
 

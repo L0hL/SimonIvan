@@ -1,11 +1,8 @@
 package simon;
 import java.awt.Color;
 
-//import GUIpractice.component.Action;
-//import GUIpractice.component.Clickable;
-
-import guiPractice.components.Action;
-import guiPractice.components.Clickable;
+import GUIpractice.component.Action;
+import GUIpractice.component.Clickable;
 
 public interface ButtonInterfaceIvan extends Clickable{
 
