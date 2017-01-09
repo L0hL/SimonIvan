@@ -4,8 +4,8 @@ import java.awt.Color;
 //import GUIpractice.component.Action;
 //import GUIpractice.component.Clickable;
 
-import GUIpractice.component.Action;
-import GUIpractice.component.Clickable;
+import guiPractice.components.Action;
+import guiPractice.components.Clickable;
 
 public interface ButtonInterfaceIvan extends Clickable{
 

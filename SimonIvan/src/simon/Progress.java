@@ -2,9 +2,9 @@ package simon;
 
 import java.awt.Graphics2D;
 
-import GUIpractice.component.Component;
+//import GUIpractice.component.Component;
 
-
+import guiPractice.components.Component;
 
 public class Progress extends Component implements ProgressInterfaceIvan {
 

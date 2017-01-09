@@ -4,11 +4,15 @@ import java.awt.Color;
 import java.util.ArrayList;
 import java.util.List;
 
-import GUIpractice.ClickableScreen;
-import GUIpractice.component.Action;
-import GUIpractice.component.TextLabel;
-import GUIpractice.component.Visible;
+//import GUIpractice.ClickableScreen;
+//import GUIpractice.component.Action;
+//import GUIpractice.component.TextLabel;
+//import GUIpractice.component.Visible;
 
+import guiPractice.components.ClickableScreen;
+import guiPractice.components.Action;
+import guiPractice.components.TextLabel;
+import guiPractice.components.Visible;
 
 public class SimonScreenIvan extends ClickableScreen implements Runnable {
 	

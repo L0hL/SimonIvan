@@ -3,8 +3,11 @@ package simon;
 import java.awt.Color;
 import java.awt.Graphics2D;
 
-import GUIpractice.component.Action;
-import GUIpractice.component.Component;
+//import GUIpractice.component.Action;
+//import GUIpractice.component.Component;
+
+import guiPractice.components.Action;
+import guiPractice.components.Component;
 
 public class Button extends Component implements ButtonInterfaceIvan {
 
@@ -62,5 +65,4 @@ public class Button extends Component implements ButtonInterfaceIvan {
 		// TODO Auto-generated method stub
 
 	}
-
 }

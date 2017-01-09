@@ -2,7 +2,7 @@ package simon;
 
 //import GUIpractice.component.Visible;
 
-import GUIpractice.component.Visible;
+import guiPractice.components.Visible;
 
 public interface ProgressInterfaceIvan extends Visible {
 
