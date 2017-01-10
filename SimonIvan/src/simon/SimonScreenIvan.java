@@ -31,7 +31,6 @@ public class SimonScreenIvan extends ClickableScreen implements Runnable {
 	public void run() {
 		label.setText("");
 		nextRound();
-		
 	}
 
 	private void nextRound() {
@@ -112,8 +111,8 @@ public class SimonScreenIvan extends ClickableScreen implements Runnable {
 			button[i] = getAButton();
 			
 			button[i].setColor(colors[i]);
-		    button[i].setX(50 + (i*10));
-		    button[i].setY(50 + (i*10));
+		    button[i].setX((80*i) + 35);
+		    button[i].setY(250);
 		    
 		    final ButtonInterfaceIvan b = button[i];
 		    

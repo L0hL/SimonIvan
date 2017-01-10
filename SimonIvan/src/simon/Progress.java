@@ -9,15 +9,15 @@ import GUIpractice.component.Component;
 
 public class Progress extends Component implements ProgressInterfaceIvan {
 
-	private static final int WIDTH = 110;
-	private static final int HEIGHT = 70;
+	private static final int WIDTH = 150;
+	private static final int HEIGHT = 100;
 	
 	private boolean gameOver;
 	private String round;
 	private String sequence;
 	
 	public Progress() {
-		super(0, 0, WIDTH, HEIGHT);
+		super(225, 100, WIDTH, HEIGHT);
 	}
 
 	@Override
@@ -51,12 +51,12 @@ public class Progress extends Component implements ProgressInterfaceIvan {
 		
 		if(gameOver){
 			String s = "Game Over!";
-			g.drawString(s, (WIDTH - fm.stringWidth(s))/2, 30);
-			g.drawString(sequence, (WIDTH - fm.stringWidth(sequence))/2, 50);
+			g.drawString(s, (WIDTH - fm.stringWidth(s))/4, 40);
+			g.drawString(sequence, (WIDTH - fm.stringWidth(sequence))/4, 60);
 		}else{
 			if(round != null && sequence != null){
-				g.drawString(round, (WIDTH - fm.stringWidth(round))/2, 30);
-				g.drawString(sequence, (WIDTH - fm.stringWidth(sequence))/2, 50);
+				g.drawString(round, (WIDTH - fm.stringWidth(round))/4, 40);
+				g.drawString(sequence, (WIDTH - fm.stringWidth(sequence))/4, 60);
 			}
 		}
 
