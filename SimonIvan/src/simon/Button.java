@@ -2,6 +2,7 @@ package simon;
 
 import java.awt.Color;
 import java.awt.Graphics2D;
+import java.awt.RenderingHints;
 
 import GUIpractice.component.Action;
 import GUIpractice.component.Component;
@@ -12,11 +13,8 @@ public class Button extends Component implements ButtonInterfaceIvan {
 	private final static int HEIGHT = 50;
 	private Action action;
 	private Color display;
+	private Color color;
 	
-	public Button(int x, int y, int w, int h) {
-		super(x, y, w, h);
-	}
-
 	public Button() {
 		super(0, 0, WIDTH, HEIGHT);
 	}
@@ -27,15 +25,17 @@ public class Button extends Component implements ButtonInterfaceIvan {
 	}
 
 	@Override
-	public boolean isHovered(int arg0, int arg1) {
-		// TODO Auto-generated method stub
+	public boolean isHovered(int x, int y) {
+		if(x > 0 && x < getX() + getWidth() && y > 0 && y < getY() + getHeight())
+			return true;
 		return false;
 	}
 
 	@Override
 	public void setColor(Color color) {
+		this.color = color;
 		display = color;
-
+		update();
 	}
 
 	@Override
@@ -45,19 +45,28 @@ public class Button extends Component implements ButtonInterfaceIvan {
 
 	@Override
 	public void highlight() {
-		// TODO Auto-generated method stub
-
+		if(color != null)
+			display = color;
+		update();
 	}
 
 	@Override
 	public void dim() {
-		// TODO Auto-generated method stub
-
+		display = Color.gray;
+		update();
 	}
 
 	@Override
 	public void update(Graphics2D g) {
-		// TODO Auto-generated method stub
-
+		g.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+		
+		if(display != null)
+			g.setColor(display);
+		else
+			g.setColor(Color.gray);//make it gray if color is not specified 
+		
+		g.fillOval(0, 0, WIDTH, HEIGHT);
+		g.setColor(Color.black);
+		g.drawOval(0, 0, WIDTH-1, HEIGHT-1);
 	}
 }
